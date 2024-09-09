@@ -6,7 +6,8 @@ sudo apt update
 sudo apt install anydesk -y
 
 echo -e "ad.security.allow_logon_token=true\nad.features.unattended=true" >> ~/.anydesk/user.conf
-echo 'Astromonte$tiAny' | sudo anydesk --set-password _default
+read -p "Digite a senha do Anydesk: " anypass
+echo $anypass | sudo anydesk --set-password _default
 sudo sed -i '' -e 's/#AutomaticLogin/AutomaticLogin/g' -e 's/#WaylandEnable/WaylandEnable/g' /etc/gdm3/custom.conf
 
 sudo dpkg --add-architecture i386

@@ -8,7 +8,7 @@ sudo apt update
 sudo apt install anydesk -y
 
 sudo echo -e "ad.security.allow_logon_token=true\nad.features.unattended=true" >> ~/.anydesk/user.conf
-sudo read -p "Digite a senha do Anydesk: " anypass
+read -p "Digite a senha do Anydesk: " anypass
 sudo echo $anypass | sudo anydesk --set-password _default
 sudo sed -i '' -e 's/#  AutomaticLogin/AutomaticLogin/g' -e 's/#WaylandEnable/WaylandEnable/g' /etc/gdm3/custom.conf
 

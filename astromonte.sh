@@ -1,6 +1,7 @@
 #!/bin/bash
 
-read -p "Digite a senha do Anydesk: " anypass
+echo "Digite a senha do Anydesk: "
+read -p anypass
 
 sudo wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
 sudo touch /etc/apt/sources.list.d/anydesk-stable.list

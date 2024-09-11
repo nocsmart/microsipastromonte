@@ -33,7 +33,7 @@ chmod +x ~/.config/autostart/.desktop
 echo -e "[Desktop Entry]" >> ~/.config/autostart/.desktop
 echo -e "Type=Application" >> ~/.config/autostart/.desktop
 echo -e "Name=Microsip" >> ~/.config/autostart/.desktop
-echo -e "Exec=/home/$USER/'Área de trabalho'/microsip/micrpsip.exe" >> ~/.config/autostart/.desktop
+echo -e "Exec=wine /home/$USER/'Área de trabalho'/microsip/microsip.exe" >> ~/.config/autostart/.desktop
 echo -e "X-GNOME-Autostart-enabled=true" >> ~/.config/autostart/.desktop
 
 reboot

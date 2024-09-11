@@ -1,5 +1,7 @@
 #!/bin/bash
 
+read -p "Digite a senha do Anydesk: " anypass
+
 sudo wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
 sudo touch /etc/apt/sources.list.d/anydesk-stable.list
 sudo chmod 777 /etc/apt/sources.list.d/anydesk-stable.list
@@ -8,7 +10,7 @@ sudo apt update
 sudo apt install anydesk -y
 
 sudo echo -e "ad.security.allow_logon_token=true\nad.features.unattended=true" >> ~/.anydesk/user.conf
-read -p "Digite a senha do Anydesk: " anypass
+#read -p "Digite a senha do Anydesk: " anypass
 sudo echo $anypass | sudo anydesk --set-password _default
 sudo sed -i '' -e 's/#  AutomaticLogin/AutomaticLogin/g' -e 's/#WaylandEnable/WaylandEnable/g' /etc/gdm3/custom.conf
 

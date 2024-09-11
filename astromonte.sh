@@ -23,3 +23,5 @@ winetricks
 cd /home/$USER/Downloads
 wget https://www.microsip.org/download/MicroSIP-3.21.4.zip
 unzip MicroSIP-3.21.4.zip -d /home/$USER/'Área de trabalho'/microsip
+
+reboot

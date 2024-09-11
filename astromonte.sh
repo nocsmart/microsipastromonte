@@ -26,13 +26,13 @@ cd /home/$USER/Downloads
 wget https://www.microsip.org/download/MicroSIP-3.21.4.zip
 unzip MicroSIP-3.21.4.zip -d /home/$USER/'Área de trabalho'/microsip
 
-touch ~/.config/autostart/.desktop
-chmod +x ~/.config/autostart/.desktop
+sudo touch ~/.config/autostart/.desktop
+sudo chmod +x ~/.config/autostart/.desktop
 
-echo -e "[Desktop Entry]" >> ~/.config/autostart/.desktop
-echo -e "Type=Application" >> ~/.config/autostart/.desktop
-echo -e "Name=Microsip" >> ~/.config/autostart/.desktop
-echo -e "Exec=/home/$USER/'Área de trabalho'/microsip/micrpsip.exe" >> ~/.config/autostart/.desktop
-echo -e "X-GNOME-Autostart-enabled=true" >> ~/.config/autostart/.desktop
+sudo echo -e "[Desktop Entry]" >> ~/.config/autostart/.desktop
+sudo echo -e "Type=Application" >> ~/.config/autostart/.desktop
+sudo echo -e "Name=Microsip" >> ~/.config/autostart/.desktop
+sudo echo -e "Exec=/home/$USER/'Área de trabalho'/microsip/micrpsip.exe" >> ~/.config/autostart/.desktop
+sudo echo -e "X-GNOME-Autostart-enabled=true" >> ~/.config/autostart/.desktop
 
 reboot
